@@ -1,7 +1,7 @@
 # Spatial Data Pipeline for Environmental Risk Analysis
 
 ### Project Overview
-This project performs a spatial risk analysis to evaluate the impact of acoustic traffic signals ("Blindenampeln") on urban wildlife mortality. By fusing 6 Open Government Datasets from the City of Vienna, including biological records; infrastructure data; and topological layers, this pipeline models whether acoustic signals deter wildlife or correlate with higher roadkill rates.
+This project performs a spatial risk analysis to evaluate the impact of acoustic traffic signals on urban wildlife mortality. By fusing 6 Open Government Datasets from the City of Vienna, including biological records; infrastructure data; and topological layers, this pipeline models whether acoustic signals deter wildlife or correlate with higher roadkill rates.
 
 ### Key Findings
 * **Hypothesis:** Acoustic signals act as a "Sonic Shield," reducing roadkill rates.
@@ -11,7 +11,7 @@ This project performs a spatial risk analysis to evaluate the impact of acoustic
 ![Robustness Chart](robustness_chart.png)
 
 ### Technical Implementation
-* **Language:** Python 3.11
+* **Language:** Python 3.9+
 * **Spatial Indexing:** Implemented `scipy.spatial.cKDTree` for high-performance nearest-neighbor queries (processing ~140,000 water/habitat points against ~1,200 infrastructure nodes).
 * **Data Engineering:** Integrated disparate CSV datasets with regex coordinate parsing and custom spatial filtering.
 * **Sensitivity Analysis:** Developed a "Robustness Loop" to test validity across varying spatial buffers (50m – 250m).
@@ -35,4 +35,5 @@ To reproduce this analysis, download the following datasets and place them in th
 pip install pandas scipy numpy matplotlib
 
 # Run the spatial analysis pipeline
+
 python final_analysis.py
