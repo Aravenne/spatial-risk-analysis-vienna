@@ -1,7 +1,7 @@
 # Spatial Data Pipeline for Environmental Risk Analysis
 
 ### Project Overview
-This project performs a spatial risk analysis to evaluate the impact of acoustic traffic signals on urban wildlife mortality. By fusing 6 Open Government Datasets from the City of Vienna, including biological records; infrastructure data; and topological layers, this pipeline models whether acoustic signals deter wildlife or correlate with higher roadkill rates.
+This project performs a spatial risk analysis to evaluate the impact of acoustic traffic signals on urban wildlife mortality. By fusing 7 Open Government Datasets from the City of Vienna, including biological records; infrastructure data; and topological layers, this pipeline models whether acoustic signals deter wildlife or correlate with higher roadkill rates.
 
 ### Key Findings
 * **Hypothesis:** Acoustic signals act as a "Sonic Shield," reducing roadkill rates.
@@ -19,15 +19,15 @@ This project performs a spatial risk analysis to evaluate the impact of acoustic
 ### Dataset Sources
 This project utilizes public data from **Vienna Open Government Data (OGD)** and **Project Roadkill (GBIF)**.
 To reproduce this analysis, download the following datasets and place them in the root directory:
-1.  **Project Roadkill:** [GBIF Occurrence Data](https://www.gbif.org/)
+1.  **Project Roadkill:** [GBIF Occurrence Data](https://www.gbif.org/dataset/d0d5ef85-71b2-4da6-b6f6-c1c3d60987d3)
 2.  **Vienna Infrastructure:**
-    * Traffic lights without acoustic indicators - locations in Vienna
-    * Traffic lights with acoustic indicators - locations in Vienna
+    * [Traffic lights without acoustic indicators - locations in Vienna](https://www.data.gv.at/datasets/961d6b7c-2920-3bce-9933-3efcb6aee472?locale=de)
+    * [Traffic lights with acoustic indicators - locations in Vienna](https://www.data.gv.at/datasets/6a8b7637-f7ee-3193-8496-129f1f0e93c0?locale=de)
 3.  **Vienna Environments:**
-    * Standing waters Vienna
-    * Nature reserves Vienna
-    * Vienna Green Belt
-    * Residential streets in Vienna
+    * [Standing waters Vienna](https://www.data.gv.at/datasets/c1a9e8db-802e-3578-b8cf-9c54111e528a?locale=de)
+    * [Nature reserves Vienna](https://www.data.gv.at/datasets/8a3ad371-69af-3c1c-9157-cc4a6cb67f83?locale=de)
+    * [Vienna Green Belt (Waters and Open Spaces)](https://www.data.gv.at/datasets/d00af72a-b57e-32ea-928f-adad7711f5d3?locale=de)
+    * [Residential streets in Vienna](https://www.data.gv.at/datasets/019ad10b-f981-366f-a424-39994c41da39?locale=de)
 
 ### Usage
 ```bash
@@ -37,3 +37,4 @@ pip install pandas scipy numpy matplotlib
 # Run the spatial analysis pipeline
 
 python final_analysis.py
+
